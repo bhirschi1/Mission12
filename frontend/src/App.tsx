@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 
-
+// This will be the introduction to what the website is
 function HeadingIntro() {
   return (
     <div>
@@ -13,6 +13,7 @@ function HeadingIntro() {
   )
 }
 
+// this is all the team data in json format retrieved from learning suite
 const team = 
   
      [
@@ -339,6 +340,8 @@ const team =
     ]
 
 
+    //this class is a component that will give info about each team including school name, city, state, mascot
+    // had to include the "<{school: string..." for identification of the datatypes from the dictionaries
 class TeamInfo extends React.Component<{school: string, name: string, city: string, state: string}> {
   render() {
     const singleTeam = this.props;
@@ -353,6 +356,7 @@ class TeamInfo extends React.Component<{school: string, name: string, city: stri
   }
 }
 
+// this function maps all dictionaries in the team variable and uses the TeamInfo class to give the appropriate information
 function TeamList() {
   return (
     <div>
@@ -360,6 +364,8 @@ function TeamList() {
     </div>
   )
 }
+//this is the main function that calls the heading description of the website in <HeadingIntro> 
+// and the team info from TeamList  
 function App() {
   return (
     <div>
